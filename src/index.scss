@@ -30,7 +30,18 @@
         border: 2px solid white;
         border-radius: 50%;
     }
-    
+}
 
+.search {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
 
+    &__input {
+        width: 100%;
+        background-color: $black;
+        border: none;
+        font-size: 1.6rem;
+    }
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import "../index.scss";
 import logo from "../assets/logo.svg";
 import home from "../assets/icon-nav-home.svg";
 import movies from "../assets/icon-nav-movies.svg";
