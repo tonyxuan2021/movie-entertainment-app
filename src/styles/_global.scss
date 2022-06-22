@@ -1,0 +1,58 @@
+@use "./mixins"as *;
+@use "./color"as *;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  font-family: 'Outfit', sans-serif;
+  max-width: 767px;
+  // width: 320px;
+  line-height: 1.8rem;
+  font-weight: 400;
+  background-color: $black;
+
+  @include tablet {
+    // width: 768px;
+    max-width: 1440px;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 8rem 10rem 8rem 10rem;
+  }
+
+  @include desktop {
+    // width: 1280px;
+    max-width: 1920px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+button,
+label,
+input,
+ul,
+span,
+img {
+  margin: 0;
+}
+
+
+
+

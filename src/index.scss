@@ -1,0 +1,36 @@
+@use "./styles/color" as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $darkblue;
+    padding: 1.5rem;
+
+    &__width {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        color: white;
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__avatar {
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+    
+
+
+}
