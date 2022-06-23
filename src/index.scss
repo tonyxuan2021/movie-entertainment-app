@@ -47,8 +47,50 @@
 }
 
 .trending {
-    &__movie__wrapper {
-        display: flex;
-        overflow: scroll;
+    padding: 1rem;
+
+    &__movie {
+
+        position: relative;
+
+        &__wrapper {
+            display: flex;
+            gap: 2rem;
+            overflow: scroll;
+        }
+
+        &__photo {
+            border-radius: 15px;
+        }
     }
+
+    &__header {
+        margin-bottom: 2rem;
+    }
+    
+    &__title {
+        position: absolute;
+        bottom: 3rem;
+        left: 2rem;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        bottom: 6rem;
+        left: 2rem;
+        color: lightgray;
+    }
+
+    &__bookmark {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: grey;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
 }

@@ -1,5 +1,7 @@
 import React from "react";
-// import test from "../assets/thumbnails/beyond-earth/regular/small.jpg"
+import movieIcon from "../assets/icon-category-movie.svg";
+import tvIcon from "../assets/icon-category-tv.svg";
+import empty from "../assets/icon-bookmark-empty.svg";
 
 const Trending = ({ newArr }) => {
   console.log(newArr);
@@ -9,17 +11,27 @@ const Trending = ({ newArr }) => {
   }
 
   return (
-    <div>
-      <h3>Trending</h3>
+    <div className="trending">
+      <h3 className="trending__header">Trending</h3>
       <div className="trending__movie__wrapper">
         {newArr.map((movie, index) => {
           const { year, category, rating, title, thumbnail } = movie;
           console.log(thumbnail.regular.small);
           return (
-            <div key={index}>
-              <img src={`${thumbnail.regular.small}`}></img>
+            <div key={index} className="trending__movie">
+              <img
+                className="trending__movie__photo"
+                src={`${thumbnail.regular.small}`}
+              ></img>
               {/* <img src={test}></img> */}
-              <p>{title}</p>
+              <p className="trending__title">{title}</p>
+              <div className="trending__info">
+                <p>{year}</p>
+                <img src={category === "Movie" ? movieIcon : tvIcon}></img>
+                <p>{category}</p>
+                <p>{rating}</p>
+              </div>
+              <img className="trending__bookmark" src={empty}></img>
             </div>
           );
         })}
