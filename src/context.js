@@ -5,18 +5,25 @@ import data from "./data/data.json";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  const [movies, setMovies] = useState(data);
+  const [query, setQuery] = useState("");
 
+  const filteredArr = movies.filter((val) => {
+    if (query === "") {
+      return movies;
+    } else if (val.title.toLowerCase().includes(query.toLowerCase())) {
+      return val;
+    } 
+  });
 
-  const [movies, setMovies] = useState([]);
-
-  useEffect(()=> {
-    if(movies) {
-      setMovies(data)
-    }
-  }, [])
+  useEffect(() => {
+    setMovies(filteredArr);
+  }, [query]);
 
   return (
-    <AppContext.Provider value={{movies}}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ movies, query, setQuery }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
