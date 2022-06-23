@@ -45,3 +45,10 @@
         font-size: 1.6rem;
     }
 }
+
+.trending {
+    &__movie__wrapper {
+        display: flex;
+        overflow: scroll;
+    }
+}
