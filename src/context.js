@@ -20,6 +20,8 @@ const AppProvider = ({ children }) => {
     setMovies(filteredArr);
   }, [query]);
 
+  console.log(movies)
+
   return (
     <AppContext.Provider value={{ movies, query, setQuery }}>
       {children}

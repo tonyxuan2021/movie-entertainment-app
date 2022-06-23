@@ -3,6 +3,7 @@ import Movies from "./pages/MoviesPage";
 import Navbar from "./components/Navbar";
 import Search from "./components/Search";
 import HomePage from "./pages/HomePage";
+import Tvs from "./pages/TvPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="movies" element={<Movies />} />
+        <Route path="tvs" element={<Tvs />} />
       </Routes>
     </BrowserRouter>
   );

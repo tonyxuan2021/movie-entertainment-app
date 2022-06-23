@@ -19,7 +19,10 @@ const Navbar = () => {
           <Link to="/movies">
             <img src={movies} className="nav__icon"></img>
           </Link>
+          <Link to="/tvs">
+
           <img src={tv} className="nav__icon"></img>
+          </Link>
           <img src={full} className="nav__icon"></img>
         </div>
       </div>

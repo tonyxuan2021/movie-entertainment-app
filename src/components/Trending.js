@@ -2,6 +2,8 @@ import React from "react";
 import movieIcon from "../assets/icon-category-movie.svg";
 import tvIcon from "../assets/icon-category-tv.svg";
 import empty from "../assets/icon-bookmark-empty.svg";
+import full from "../assets/icon-bookmark-full.svg"
+
 
 const Trending = ({ trendingArr }) => {
 
@@ -14,7 +16,7 @@ const Trending = ({ trendingArr }) => {
       <p className="trending__header">Trending</p>
       <div className="trending__movie__wrapper">
         {trendingArr.map((movie, index) => {
-          const { year, category, rating, title, thumbnail } = movie;
+          const { year, category, rating, title, thumbnail, isBookmarked } = movie;
           return (
             <div key={index} className="trending__movie">
               <img
@@ -29,7 +31,7 @@ const Trending = ({ trendingArr }) => {
                 <p>{category}</p>
                 <p>{rating}</p>
               </div>
-              <img className="trending__bookmark" src={empty}></img>
+              <img className="trending__bookmark" src={isBookmarked ? full : empty}></img>
             </div>
           );
         })}

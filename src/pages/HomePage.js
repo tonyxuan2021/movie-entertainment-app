@@ -7,7 +7,6 @@ import { useGlobalContext } from "../context";
 
 const HomePage = () => {
   const { movies } = useGlobalContext();
-  // console.log(movies)
 
   const trendingArr = movies.filter((data)=> {
       return data.isTrending

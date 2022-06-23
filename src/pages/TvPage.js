@@ -3,27 +3,24 @@ import tvIcon from "../assets/icon-category-tv.svg";
 import movieIcon from "../assets/icon-category-movie.svg";
 import empty from "../assets/icon-bookmark-empty.svg";
 import full from "../assets/icon-bookmark-full.svg"
-
 import { useGlobalContext } from "../context";
 
-const Movies = () => {
+const Tvs = () => {
   const { movies } = useGlobalContext();
 
-  // console.log(movies)
-
-  const moviesArr = movies.filter((movie) => {
-    return movie.category === "Movie";
+  const tvsArr = movies.filter((tv) => {
+    return tv.category === "TV Series";
   });
 
-  if (moviesArr.length < 0) {
+  if (tvsArr.length < 0) {
     return <p>Loading...</p>;
   }
 
   return (
     <div className="movie">
-      <p className="rec__header">Movies</p>
+      <p className="rec__header">TV Series</p>
       <div className="rec__wrapper">
-        {moviesArr.map((movie, index) => {
+        {tvsArr.map((movie, index) => {
           const { year, category, rating, title, thumbnail, isBookmarked } = movie;
           return (
             <div key={index} className="rec__movie__wrapper">
@@ -44,4 +41,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default Tvs;
