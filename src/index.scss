@@ -17,7 +17,11 @@
         width: 20px;
         height: 20px;
         object-fit: cover;
-        color: white;
+
+        &:hover {
+            filter: brightness(3);
+            cursor: pointer;
+        }
 
         &__wrapper {
             display: flex;
@@ -107,12 +111,12 @@
     }
 
     &__img {
-        width: 180px;
+        width: 100%;
         border-radius: 15px;
     }
 
     &__movie__wrapper {
-        width: 49%;
+        width: 46%;
         position: relative;
     }
 
@@ -141,4 +145,8 @@
         padding: 1rem;
         border-radius: 10px;
     }
+}
+
+.movie {
+    padding: 1rem;
 }

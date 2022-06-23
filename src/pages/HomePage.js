@@ -20,8 +20,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
-      <Search />
       <Trending trendingArr={trendingArr}/>
       <Recommended recommendedArr={recommendedArr}/>
     </div>
