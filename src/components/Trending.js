@@ -3,20 +3,18 @@ import movieIcon from "../assets/icon-category-movie.svg";
 import tvIcon from "../assets/icon-category-tv.svg";
 import empty from "../assets/icon-bookmark-empty.svg";
 
-const Trending = ({ newArr }) => {
-  console.log(newArr);
+const Trending = ({ trendingArr }) => {
 
-  if (newArr.length < 0) {
+  if (trendingArr.length < 0) {
     return <p>Loading...</p>;
   }
 
   return (
     <div className="trending">
-      <h3 className="trending__header">Trending</h3>
+      <p className="trending__header">Trending</p>
       <div className="trending__movie__wrapper">
-        {newArr.map((movie, index) => {
+        {trendingArr.map((movie, index) => {
           const { year, category, rating, title, thumbnail } = movie;
-          console.log(thumbnail.regular.small);
           return (
             <div key={index} className="trending__movie">
               <img

@@ -1,4 +1,4 @@
-@use "./styles/color" as *;
+@use "./styles/color"as *;
 
 .nav {
     display: flex;
@@ -66,8 +66,9 @@
 
     &__header {
         margin-bottom: 2rem;
+        font-size: 2rem;
     }
-    
+
     &__title {
         position: absolute;
         bottom: 3rem;
@@ -93,4 +94,50 @@
         border-radius: 10px;
     }
 
+}
+
+.rec {
+    padding: 1rem;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 180px;
+        border-radius: 15px;
+    }
+
+    &__movie__wrapper {
+        width: 49%;
+        position: relative;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: lightgray;
+        font-size: 1.2rem;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    &__bookmark {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: grey;
+        padding: 1rem;
+        border-radius: 10px;
+    }
 }
