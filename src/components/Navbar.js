@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="nav">
-      <img src={logo} className="nav__width"></img>
+      <Link to="/">
+        <img src={logo} className="nav__width"></img>
+      </Link>
       <div>
         <div className="nav__icon__wrapper">
           <Link to="/">
@@ -20,10 +22,11 @@ const Navbar = () => {
             <img src={movies} className="nav__icon"></img>
           </Link>
           <Link to="/tvs">
-
-          <img src={tv} className="nav__icon"></img>
+            <img src={tv} className="nav__icon"></img>
           </Link>
-          <img src={full} className="nav__icon"></img>
+          <Link to="/bookmark">
+            <img src={full} className="nav__icon"></img>
+          </Link>
         </div>
       </div>
       <img src={avatar} className="nav__width nav__avatar"></img>
