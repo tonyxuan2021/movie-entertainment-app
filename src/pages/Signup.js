@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import { API_URL_REGISTER } from "../config/index";
 
 const SignUp = () => {
   const [error, setError] = useState("");
@@ -11,7 +12,7 @@ const SignUp = () => {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:8080/api/users/register`, {
+      .post(`${API_URL_REGISTER}`, {
         email: e.target.email.value,
         password: e.target.password.value,
       })

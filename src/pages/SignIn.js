@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import { API_URL_LOGIN } from "../config/index";
 import logo from "../assets/logo.svg";
 
 const SignIn = () => {
@@ -13,7 +14,7 @@ const SignIn = () => {
     const password = e.target.password.value;
 
     axios
-      .post(`http://localhost:8080/api/users/login`, {
+      .post(`${API_URL_LOGIN}`, {
         email,
         password,
       })
