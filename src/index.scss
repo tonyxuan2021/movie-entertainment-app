@@ -220,10 +220,22 @@
 
     &__img {
 
+        @include tablet {
+            width: 5rem;
+        }
+
         &__wrapper {
             display: flex;
             justify-content: center;
             margin: 8rem;
+
+            @include tablet {
+                margin: 10rem;
+            }
+
+            @include desktop {
+                margin: 6rem;
+            }
         }
 
     }
@@ -240,6 +252,16 @@
         margin: 0rem 2rem;
         font-size: 1.8rem;
         background-color: $darkblue;
+        border-radius: 15px;
+
+        @include tablet {
+            padding: 6rem 4rem;
+            margin: 0rem 10rem;
+        }
+
+        @include desktop {
+            margin: 0rem 35rem;
+        }
     }
 
     &__link {
@@ -261,6 +283,11 @@
             padding: 2rem 4rem;
             border-radius: 10px;
             border: none;
+            font-size: 1.8rem;
+
+            @include tablet {
+                font-size: 2rem ;
+            }
         }
 
         &__signup {
@@ -280,12 +307,21 @@
         font-size: 1.8rem;
         color: $white;
     }
+
+    &__err {
+        padding: 2rem;
+        color: #fc4747;
+    }
 }
 
 .signup {
     &__msg {
         border-left: 5px solid #ddd;
-        padding: 0.75rem;
-        margin-top: 2rem;
+        margin: 2rem;
+    }
+
+    &__error {
+        padding: 2rem;
+        color: #fc4747
     }
 }

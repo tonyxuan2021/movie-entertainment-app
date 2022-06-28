@@ -53,7 +53,7 @@ const SignIn = () => {
         </div>
       </form>
       {success && <Navigate replace to="/" />}
-      {error && <p>{error}</p>}
+      {error && <p className="signin__err">{error}</p>}
     </div>
   );
 };

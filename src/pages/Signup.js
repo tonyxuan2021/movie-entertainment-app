@@ -54,7 +54,7 @@ const SignUp = () => {
       </form>
 
       {success && <div className="signup__msg">Signed up!</div>}
-      {error && <div>{error}</div>}
+      {error && <div className="signup__error">{error}</div>}
     </div>
   );
 };
