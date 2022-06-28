@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Recommended from "../components/Recommended";
 import Search from "../components/Search";
 import Trending from "../components/Trending";
 import { useGlobalContext } from "../context";
+import SignUp from "./Signup";
 
 const HomePage = () => {
   const [failedAuth, setFailedAuth] = useState(false);
@@ -26,8 +28,7 @@ const HomePage = () => {
   });
 
   if (failedAuth) {
-    // user not logged in
-    return <p>You must be logged in</p>;
+    return <SignUp />;
   }
 
   return (
