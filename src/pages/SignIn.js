@@ -38,11 +38,14 @@ const SignIn = () => {
           placeholder="Email address"
           name="email"
           className="signin__input"
+          value="test@gmail.com"
         />
         <input
           placeholder="Password"
           className="signin__input"
           name="password"
+          type="password"
+          value="123"
         />
         <button className="signin__link__login">Login to your account</button>
         <div className="signin__link__wrapper">

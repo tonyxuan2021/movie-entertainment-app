@@ -5,6 +5,7 @@ import Recommended from "../components/Recommended";
 import Search from "../components/Search";
 import Trending from "../components/Trending";
 import { useGlobalContext } from "../context";
+import SignIn from "./SignIn";
 import SignUp from "./Signup";
 
 const HomePage = () => {
@@ -28,7 +29,7 @@ const HomePage = () => {
   });
 
   if (failedAuth) {
-    return <SignUp />;
+    return <SignUp />
   }
 
   return (
